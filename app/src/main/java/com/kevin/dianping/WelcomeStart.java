@@ -10,6 +10,7 @@ import org.xutils.x;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import com.kevin.dianping.Utils.ShareUtils;
 
 /**
  * Created by Administrator on 2016/12/6.
@@ -23,16 +24,17 @@ public class WelcomeStart extends Activity {
         Timer timer = new Timer();
         timer.schedule(new Task(),3000);
     }
-/**
- * 此处判断是否是第一次跳转
- *
- *
- * */
 
     private class Task extends TimerTask {
         @Override
         public void run() {
-            startActivity(new Intent(WelcomeStart.this,WelcomeGuide.class));
+            if(ShareUtils.getWelcomeBoolean(getBaseContext())){
+                startActivity(new Intent(WelcomeStart.this,MainActivity.class));
+            }else {
+                startActivity(new Intent(WelcomeStart.this,WelcomeGuide.class));
+                //保存访问记录
+                ShareUtils.putWelcomeBoolean(getBaseContext(),true);
+            }
             finish();
         }
     }
