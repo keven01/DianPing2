@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.kevin.dianping.MainActivity">
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
+    <RadioGroup
+        android:id="@+id/main_button_tabs"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/main_home"
+            style="@style/main_item"
+            android:checked="true"
+            android:drawableTop="@drawable/main_home_selector"
+            android:text="@string/main_home"/>
+        <RadioButton
+            android:id="@+id/main_tuan"
+            style="@style/main_item"
+            android:drawableTop="@drawable/main_tuan_selector"
+            android:text="@string/main_tuan"/>
+        <RadioButton
+            android:id="@+id/main_search"
+            style="@style/main_item"
+            android:drawableTop="@drawable/main_search_selector"
+            android:text="@string/main_search"/>
+        <RadioButton
+            android:id="@+id/main_my"
+            style="@style/main_item"
+            android:drawableTop="@drawable/main_my_selector"
+            android:text="@string/main_my"/>
+    </RadioGroup>
 
-    <Button
-        android:id="@+id/btn_test_xutils"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:text="测试"/>
-</RelativeLayout>
+
+
+
+    <!--<Button-->
+        <!--android:id="@+id/btn_test_xutils"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:text="测试"/>-->
+</LinearLayout>

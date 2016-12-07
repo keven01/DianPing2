@@ -23,8 +23,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         x.view().inject(this);
     }
-    @Event(value = R.id.btn_test_xutils)
-    private void Click(View v){
-        Toast.makeText(this,"测试xUtils",Toast.LENGTH_SHORT).show();
-    }
+//    @Event(value = R.id.btn_test_xutils)
+//    private void Click(View v){
+//        Toast.makeText(this,"测试xUtils",Toast.LENGTH_SHORT).show();
+//    }
 }
