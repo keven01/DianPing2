@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 /**
  * Created by Administrator on 2016/12/6.
  */
-
+//实现标记的写入与读取
 public class ShareUtils
 {
     private static final String FILE_NAME = "dianping";
